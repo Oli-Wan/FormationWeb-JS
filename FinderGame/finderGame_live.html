@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Finder game</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var nb = Math.floor(Math.random()*100);
+			console.log(nb);
+
+			var attempts = 7;
+
+			while (attempts > 0){
+
+				var returnValue = prompt("Entrez un nombre entre 0 et 100");
+
+				if (returnValue == nb) {
+					//il a gagne
+					alert("WiNNER");
+					break;
+				}
+				else if (returnValue > nb) {
+					// valeur trop grande
+					alert("ta valeur est trop grande");
+				}
+				else if (returnValue < nb) {
+					// valeur trop petite
+					alert("ta valeur est trop petite");
+				}
+
+				attempts = attempts - 1;
+
+			}
+
+			if (attempts == 0) {
+				alert("vous avez PERDU !!!");
+			}
+		</script>
+	</body>
+</html>

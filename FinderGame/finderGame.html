@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Finder game</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var numberToGuess = Math.floor(Math.random() * 101);
+
+			console.log(numberToGuess);
+			
+			var attempts = 7;
+
+			while(attempts > 0){
+				
+				var attemptsString = "essai";
+				if(attempts > 1)
+					attemptsString += "s";
+
+				var guess = prompt("Choisissez un nombre entre 0 et 100. Il vous reste "+attempts+" "+attemptsString);
+
+				if( guess == numberToGuess)
+					break;
+				else if(guess > numberToGuess)
+					alert("Trop grand!")
+				else if(guess < numberToGuess)
+					alert("Trop petit!")
+
+				attempts--;
+			}
+
+			if(attempts > 0)
+				alert("Gagn\u00E9! Le nombre \u00E0 trouver \u00E9tait bien le "+numberToGuess);
+			else
+				alert("Perdu! Il fallait trouver le nombre "+numberToGuess);
+		</script>
+	</body>
+</html>
