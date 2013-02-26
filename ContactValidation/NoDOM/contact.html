@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Contact - Validation without attaching events to DOM</title>
+		<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="js/form-validation.js"></script>
+	</head>
+	<body>
+		<form id="contactForm" action="contact.html" method="post" onsubmit="return validateForm(this);">
+			<fieldset>
+				<legend>Information</legend>
+				<label for="firstname">Pr&eacute;nom</label>
+				<input type="text" name="firstname" id="firstname" />
+				<span id="firstnameError" class="errorNotification">
+					Vous devez entrer un pr&eacute;nom. Le pr&eacute;nom ne peut contenir de chiffres
+				</span>
+				<br/>
+
+				<label for="lastname">Nom de famille</label>
+				<input type="text" name="lastname" id="lastname" /> 
+				<span id="lastnameError" class="errorNotification">
+					Vous devez entrer un nom. Le nom ne peut contenir de chiffres
+				</span>
+				<br />
+
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" /> 
+				<span id="emailError" class="errorNotification">
+					Vous devez entrer un email valide.
+				</span>
+				<br />
+				<label>Sexe</label>
+				<input type="radio" value="f" name="sex" id="female" checked="checked"/>
+				<label id="femaleLabel" for="female">F&eacute;minin</label>
+				<input type="radio" value="m" name="sex" id="male" />
+				<label id="maleLabel" for="male">Masculin</label>
+				<br />
+				<label for="job">Travail</label>
+				<select name="job" id="job">
+					<option>&Eacute;tudiant</option>
+					<option>Salari&eacute; CDI</option>
+					<option>Salari&eacute; CDD</option>
+				</select>
+			</fieldset>
+			<div class="my-first-class">
+				<label for="comment">Commentaire</label>
+				<br />
+				<textarea cols="50" rows="10" name="comment" id="comment"></textarea>
+				<br />
+				<span id="commentError" class="errorNotification">
+					Vous devez entrer un commentaire!
+				</span>
+				<br />
+				<input type="checkbox" checked="checked" id="newsletter" name="newsletter" value="true" />
+				<label for="newsletter">M'abonnez &agrave; la newsletter!</label>
+				<br />
+				<input type="submit" value="Envoyer" />
+				<input type="reset" value="R&eacute;initialiser" />
+			</div>
+		</form>
+	</body>
+</html>
