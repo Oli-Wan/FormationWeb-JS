@@ -1,8 +1,6 @@
 window.onload = function() {
-	document.getElementById("magicNumberForm")
-		.addEventListener("submit", calculateMagicNumberEvent);
-	document.getElementById("loveForm")
-		.addEventListener("submit", loveMeter);
+	document.getElementById("magicNumberForm").addEventListener("submit", calculateMagicNumberEvent);
+	document.getElementById("loveForm").addEventListener("submit", loveMeter);
 };
 
 function calculateMagicNumberEvent(event) {
