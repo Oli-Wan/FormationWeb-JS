@@ -1,0 +1,52 @@
+<! doctype html>
+<html>
+	<head>
+		<title>Love meter</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/loveMeter.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<form action="loveMeter.html" method="post" id="magicNumberForm">
+			<fieldset>
+				<legend>Mon num&eacute;ro magique!</legend>
+
+				<label for="name">Premier pr&eacute;nom</label>
+				<input type="text" id="name" name="name" />
+				<span id="nameError" class="errorNotification">
+					Vous devez entrer un pr&eacute;nom. Le pr&eacute;nom ne peut contenir de chiffres
+				</span>
+				<br />
+				
+				<input type="submit" value="Quel est mon num&eacute;ro magique?" />
+
+				<p id="magicNumberResults"></p>
+			</fieldset>
+		</form>
+
+		<form action="loveMeter.html" method="post" id="loveForm">
+			<fieldset>
+				<legend>Love Meter</legend>
+			
+				<label for="name1">Premier pr&eacute;nom</label>
+				<input type="text" id="name1" name="name1" />
+				<span id="name1Error" class="errorNotification">
+					Vous devez entrer un pr&eacute;nom. Le pr&eacute;nom ne peut contenir de chiffres
+				</span>
+
+				<br />
+
+				<label for="name2">Deuxi&egrave;me pr&eacute;nom</label>
+				<input type="text" id="name2" name="name2" />
+				<span id="name2Error" class="errorNotification">
+					Vous devez entrer un pr&eacute;nom. Le pr&eacute;nom ne peut contenir de chiffres
+				</span>
+
+				<br />
+				
+				<input type="submit" value="Sommes-nous compatibles?" />
+
+				<p id="loveMeterResults"></p>
+			</fieldset>
+		</form>
+	</body>
+</html>

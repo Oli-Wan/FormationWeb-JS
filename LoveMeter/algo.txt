@@ -1,0 +1,27 @@
+#Pseudo algo
+
+FONCTION maFonction(nom)
+	VARIABLE magicNumber = 0
+
+	POUR lettre DANS nom
+		VARIABLE ascii = code ascii de ma lettre
+		VARAIBLE resultat = ascii PUISSANCE (index de la lettre dans le mot)
+
+		magicNumber = magicNumber + reduction(resultat)
+	FIN POUR
+
+	RENVOIE reduction(magicNumber);
+FIN
+
+FONCTION reduction(nombre)
+	TANT QUE taille de nombre SUPERIEURE A 1
+		VARIABLE nombreReduit = 0
+		
+		POUR chiffre DANS nombre
+			nombreReduit = nombreReduit + chiffre
+		FIN POUR
+		nombre = nombreReduit
+	FIN TANT QUE
+
+	RENVOIE nombreReduit
+FIN
